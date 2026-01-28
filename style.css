@@ -1,0 +1,263 @@
+/* =============================== */
+/* GLOBAL RESET */
+/* =============================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+}
+
+/* =============================== */
+/* HEADER */
+/* =============================== */
+header {
+    background: #0B3C5D;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #1DA1F2;
+}
+
+/* =============================== */
+/* HERO SECTION */
+/* =============================== */
+.hero {
+    background: linear-gradient(to right, #0B3C5D, #1DA1F2);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+}
+
+.hero button {
+    padding: 12px 25px;
+    border: none;
+    background: white;
+    color: #0B3C5D;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hero button:hover {
+    background: #e5e7eb;
+}
+
+/* =============================== */
+/* GENERAL SECTIONS */
+/* =============================== */
+section {
+    padding: 40px;
+}
+
+/* =============================== */
+/* CARDS */
+/* =============================== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* =============================== */
+/* FORMS */
+/* =============================== */
+form {
+    background: white;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* =============================== */
+/* FOOTER */
+/* =============================== */
+footer {
+    background: #0B3C5D;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* =============================== */
+/* 🤖 AI CHATBOT */
+/* =============================== */
+.chatbot-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2563eb;
+    color: white;
+    font-size: 22px;
+    padding: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    z-index: 1000;
+}
+
+.chatbot-box {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 320px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.chatbot-header {
+    background: #0B3C5D;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-messages {
+    padding: 10px;
+    height: 220px;
+    overflow-y: auto;
+    background: #f4f6f8;
+}
+
+.chatbot-messages .bot {
+    background: #e5e7eb;
+    padding: 8px 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    width: fit-content;
+}
+
+.chatbot-messages .user {
+    background: #2563eb;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 6px;
+    margin-left: auto;
+    margin-bottom: 8px;
+    width: fit-content;
+}
+
+.chatbot-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.chatbot-input button {
+    padding: 10px 15px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* =============================== */
+/* PROJECT DETAILS + ANIMATIONS */
+/* =============================== */
+.project-detail {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 40px;
+}
+
+.fade-in {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.slide-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.9s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+
+.project-detail h2 {
+    margin-top: 40px;
+    color: #0B3C5D;
+}
+
+.project-detail p,
+.project-detail li {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.project-detail ul {
+    padding-left: 20px;
+}
+
+/* =============================== */
+/* KEYFRAMES */
+/* =============================== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

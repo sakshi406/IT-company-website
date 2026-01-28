@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Projects</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Our Projects</h1>
+</header>
+
+<!-- ===================== -->
+<!-- CLICKABLE PROJECTS -->
+<!-- ===================== -->
+<section class="cards">
+
+    <a href="company-website.html" class="project-link">
+        <div class="card">
+            <h3>Company Website</h3>
+            <p>Corporate website for IT services company.</p>
+        </div>
+    </a>
+
+    <a href="crm-system.html" class="project-link">
+        <div class="card">
+            <h3>CRM System</h3>
+            <p>Client management and lead tracking system.</p>
+        </div>
+    </a>
+
+    <a href="portfolio-website.html" class="project-link">
+        <div class="card">
+            <h3>Portfolio Website</h3>
+            <p>Professional portfolio for individuals.</p>
+        </div>
+    </a>
+
+    <a href="chatbot.html" class="project-link" target="_blank">
+        <div class="card">
+            <h3>AI Chatbot for Website</h3>
+            <p>JavaScript-based AI chatbot for automated customer interaction.</p>
+        </div>
+    </a>
+
+</section>
+
+<footer>
+    <p>© 2026 SKSham IT Services</p>
+</footer>
+
+<!-- ===================== -->
+<!-- AI CHATBOT -->
+<!-- ===================== -->
+
+<!-- Floating Chat Button -->
+<div class="chatbot-toggle" onclick="toggleChat()">💬</div>
+
+<!-- Chatbot Window -->
+<div class="chatbot-box" id="chatbot">
+    <div class="chatbot-header">
+        AI Assistant
+        <span onclick="toggleChat()">✖</span>
+    </div>
+
+    <div class="chatbot-messages" id="chatMessages">
+        <div class="bot">Hi 👋 How can I help you?</div>
+    </div>
+
+    <div class="chatbot-input">
+        <input type="text" id="chatInput" placeholder="Type a message...">
+        <button onclick="sendChat()">Send</button>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
